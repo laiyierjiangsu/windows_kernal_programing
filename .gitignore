@@ -1,3 +1,9 @@
+# 
+Bin
+Temp
+.vs
+*.user
+
 # Prerequisites
 *.d
 
@@ -39,3 +45,4 @@
 
 # debug information files
 *.dwo
+
