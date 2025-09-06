@@ -22,7 +22,7 @@ int main()
 	if (pszLastBackslash) {
 		*(pszLastBackslash + 1) = '\0'; // 保留目录部分，去掉文件名
 	}
-	_tcscat_s(szPath, MAX_PATH, _T("..\\server\\server.exe")); // 拼接得到 server.exe 的完整路径
+	_tcscat_s(szPath, MAX_PATH, _T("server.exe")); // 拼接得到 server.exe 的完整路径
 
 	// 创建子进程
 	if (!CreateProcess(
@@ -45,7 +45,7 @@ int main()
 	std::cout << "子进程已创建，PID: " << pi.dwProcessId << std::endl;
 	std::cout << "进程句柄已保存: " << pi.hProcess << std::endl;
 
-	CloseHandle(pi.hProcess);
+	//CloseHandle(pi.hProcess);
 	// 等待子进程结束
 	std::cout << "等待子进程退出..." << std::endl;
 	WaitForSingleObject(pi.hProcess, INFINITE);
